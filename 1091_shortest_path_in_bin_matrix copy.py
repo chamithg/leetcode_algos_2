@@ -7,7 +7,7 @@ class Solution:
             grid[r][c] = val
             directions = [(r,c+1),(r+1,c+1),(r+1,c),(r+1,c-1),(r,c-1),(r-1,c-1),(r-1,c),(r-1,c+1)] 
             for (r1,c1) in directions:
-                if 0 <=r1 < h and 0 <=c1 < w and grid[r1][c1] == 0:
+                if 0 <=r1 < h and 0 <=c1 < w and (grid[r1][c1] == 0 or grid[r1][c1] >= val+1):
                     markPath(r1,c1,val+1)
 
         if grid[0][0] != 0 or grid[h-1][w-1] != 0:
