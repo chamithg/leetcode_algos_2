@@ -37,10 +37,7 @@ class Solution:
         for r in range(h):
             for c in range(w):
                 if board[r][c] == "O" and (r,c) not in free_zeros:
-                    board[r][c] = "x"        
-                
-        print(free_zeros)
-        print(marginal_zeros)
+                    board[r][c] = "X"        
         return board
 
 
